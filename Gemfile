@@ -4,8 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 gem 'rails', '~> 6.1.2', '>= 6.1.2.1'
-gem 'jquery-rails'
+gem 'puma', '~> 5.0'
+gem 'webpacker', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
