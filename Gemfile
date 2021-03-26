@@ -9,6 +9,12 @@ gem 'webpacker', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
+gem 'devise'
+gem 'mimemagic'
+
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
