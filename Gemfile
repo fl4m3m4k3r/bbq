@@ -12,6 +12,9 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'mimemagic'
 
+gem 'rails-i18n'
+gem 'devise-i18n'
+
 group :production do
   gem 'pg'
 end
