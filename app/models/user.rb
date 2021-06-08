@@ -4,9 +4,9 @@ class User < ApplicationRecord
 
   has_many :events, dependent: :destroy
 
-  validates :name, presence: true, length: {maximum: 255}
+  validates :name, length: {maximum: 255}
 
-  before_validation :set_name, on: :create
+  before_create :set_name
 
   private
 
