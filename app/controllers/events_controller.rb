@@ -35,9 +35,12 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    user = @event.user
-    @event.destroy
-    redirect_to user_path(user), notice: I18n.t('controllers.events.destroyed')
+    if @event.user == current_user
+      @event.destroy
+      redirect_to user_path(user), notice: I18n.t('controllers.events.destroyed')
+    else
+      redirect_to root_path, alert: 'Это нельзя'
+    end
   end
 
   private
