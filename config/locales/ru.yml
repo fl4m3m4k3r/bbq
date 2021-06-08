@@ -1,9 +1,16 @@
-
 ru:
   activerecord:
     models:
-      user: 'Пользователь'
-      event: 'Событие'
+      user:
+        one: 'Пользователь'
+        few: 'Пользователя'
+        many: 'Пользователей'
+        of: 'Пользователя'
+      event:
+        one: 'Событие'
+        few: 'События'
+        many: 'Событий'
+        of: 'События'
     attributes:
       user:
         email: 'Email'
@@ -15,6 +22,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
   controllers:
     events:
       created: 'Событие создано!'
@@ -22,12 +30,57 @@ ru:
       destroyed: 'Событие удалено :('
     users:
       updated: 'Профиль был обновлен'
-  app:
-    name: 'Шашлыки!'
-    company: 'Хороший программист'
-  errors:
-    zero: 'ошибок'
-    one: 'ошибка'
-    few: 'ошибки'
-    many: 'ошибок'
-    other: 'ошибок'
+
+  global:
+    word:
+      account: 'Аккаунт'
+      my: 'Мой'
+    app:
+      name: 'Шашлыки!'
+      company: 'Хороший программист'
+    profile:
+      one: 'Профиль'
+      of: 'Профиля'
+    actions:
+      verb:
+        delete: 'Удалить'
+        change: 'Изменить'
+        create: 'Создать'
+        update: 'Обновить'
+        save: 'Сохранить'
+        back: 'Вернуться'
+        show: 'Показать'
+        edit: 'Редактировать'
+        forgot: 'Забыли'
+      noun:
+        delete: 'Удаление'
+        change: 'Изменение'
+        create: 'Создание'
+        update: 'Обновление'
+        save: 'Сохранение'
+        back: 'Возвращение'
+        show: 'Вывод'
+        edit: 'Редактирование'
+      sign:
+        out: 'Выйти'
+        in: 'Войти'
+        up: 'Зарегистрироваться'
+    errors:
+      zero: 'ошибок'
+      one: 'ошибка'
+      few: 'ошибки'
+      many: 'ошибок'
+      other: 'ошибок'
+
+  form:
+    confirmation:
+      are_you_sure_that_you_want: "Вы уверены что хотите удалить аккаунт?"
+    devise:
+      new_password: 'Новый пароль'
+      current_password: 'Текущий пароль'
+      send_me_reset_password_instructions: 'Отправьте письмо для восстановления пароля'
+      currently_waiting_confirmation_for: 'Ожидаем подтеждение для:'
+      leave_blank_if_you_dont_want_change_password: 'Оставьте пустым если не хотите менять пароль'
+      characters_minimum: 'Символов требуется'
+      unpleasured_of_servise?: 'Недовольны сервисом?'
+      user_data: 'Данные пользователя'

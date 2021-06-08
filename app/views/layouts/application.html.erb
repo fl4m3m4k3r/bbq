@@ -20,16 +20,16 @@
       <span class="icon-bar"></span>
     </button>
 
-    <%= link_to I18n.t('app.name'), root_path, class: 'navbar-brand'%>
+    <%= link_to t('global.app.name'), root_path, class: 'navbar-brand'%>
 
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in?  %>
-          <li><%= link_to 'Профиль', current_user %></li>
-          <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
+          <li><%= link_to t('global.profile.one'), current_user %></li>
+          <li><%= link_to t('global.actions.sign.out'), destroy_user_session_path, :method => :delete %></li>
         <% else %>
-          <li><%= link_to 'Войти', new_user_session_path %></li>
-          <li><%= link_to 'Зарегестрироваться', new_user_registration_path %></li>
+          <li><%= link_to t('global.actions.sign.in'), new_user_session_path %></li>
+          <li><%= link_to t('global.actions.sign.up'), new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
@@ -47,7 +47,7 @@
   </div>
 
   <footer>
-    <p>&copy; <%= I18n.t('app.company') %> 2021</p>
+    <p>&copy; <%= I18n.t('global.app.company') %> 2021</p>
   </footer>
 </div>
 </body>

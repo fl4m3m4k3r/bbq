@@ -1,4 +1,4 @@
-<h2>Редактирование профиля</h2>
+<h2><%= "#{t('global.actions.noun.edit')} #{t('global.profile.of')}".downcase.capitalize %></h2>
 
 <div class="row">
   <div class="col-md-6 buffer-top">
@@ -16,11 +16,11 @@
       </div>
 
       <div class="actions">
-        <%= f.submit 'Сохранить', class: 'btn btn-primary' %> или <%= link_to 'вернуться', :back %>
+        <%= f.submit t('global.actions.verb.save'), class: 'btn btn-primary' %> или <%= link_to t('global.actions.verb.back'), :back %>
       </div>
 
       <p class="buffer-top">
-        <%= link_to 'Сменить пароль', edit_user_registration_path %>
+        <%= link_to "#{t('global.actions.verb.change')} #{t('activerecord.attributes.user.password')}".downcase.capitalize, edit_user_registration_path %>
       </p>
 
     <% end %>

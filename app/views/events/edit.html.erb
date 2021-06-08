@@ -1,6 +1,6 @@
-<h1>Редактирование события</h1>
+<h1><%= "#{t('global.actions.noun.edit')} #{t('activerecord.models.event.of')}".downcase.capitalize %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<%= link_to "#{t('global.actions.verb.show')} #{t('activerecord.models.event.one')}".downcase.capitalize, @event %> |
+<%= link_to t('global.actions.verb.back'), events_path %>
