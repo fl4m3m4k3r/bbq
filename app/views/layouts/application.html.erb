@@ -6,12 +6,11 @@
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
-
     <%= javascript_pack_tag "application" %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 <body>
-
 <div class="navbar navbar-default navbar-static-top">
   <div class="container">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -29,6 +28,7 @@
           <li><%= link_to t('global.actions.sign.out'), destroy_user_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to t('global.actions.sign.in'), new_user_session_path %></li>
+          <li><%= link_to 'sign_in', new_user_session_path %></li>
           <li><%= link_to t('global.actions.sign.up'), new_user_registration_path %></li>
         <% end %>
       </ul>
@@ -37,6 +37,7 @@
 </div>
 
 <div class="container">
+  <%= link_to 'sign_in', new_user_session_path %>
   <div class="row">
     <div class="col-lg-9">
       <%= bootstrap_flash %>
