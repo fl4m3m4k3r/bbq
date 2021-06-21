@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only: [:destroy, :edit]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :current_user_is_owner?, only: [:edit, :update, :destroy]
 
   def index
     @events = Event.all
@@ -45,11 +47,20 @@ class EventsController < ApplicationController
   end
 
   private
-    def set_event
-      @event = Event.find(params[:id])
-    end
 
-    def event_params
-      params.require(:event).permit(:title, :address, :datetime, :description)
+  def current_user_is_owner?
+    if
+      @event.user == current_user
+    else
+      redirect_to root_path, alert: 'Не пытайтесь, мы всё предусмотрели.'
     end
+  end
+
+  def set_event
+    @event = Event.find(params[:id])
+  end
+
+  def event_params
+    params.require(:event).permit(:title, :address, :datetime, :description)
+  end
 end
