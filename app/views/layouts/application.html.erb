@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
+    <link rel="stylesheet" href="stic">
     <%= csrf_meta_tags %>
 
     <%= javascript_pack_tag "application" %>
@@ -42,8 +43,10 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; <%= I18n.t('global.app.company') %> 2021</p>
+  <footer class="bg-dark fixed-bottom">
+    <div class="container text-white text-center">
+      <p class="">&copy; <%= I18n.t('global.app.company') %> 2021</p>
+    </div>
   </footer>
 </div>
 </body>

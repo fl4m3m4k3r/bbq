@@ -1,9 +1,18 @@
 <h1><%= "#{t('activerecord.models.event.of')}" %></h1>
 
-<div class="buffer-both">
-  <%= link_to "#{t('global.actions.verb.create')} #{t('activerecord.models.event.one')}".downcase.capitalize, new_event_path, class: 'btn btn-success' %>
+<div class="buffer-bottom">
+  <% if user_signed_in? %>
+    <%= link_to "#{t('global.actions.verb.create')} #{t('activerecord.models.event.one')}".downcase.capitalize, new_event_path, class: 'btn btn-success' %>
+  <% else %>
+    <p><%= "Что бы тоже мочь создавать события необходимо зарегистрироваться, дерзайте!" %> <%= link_to t('global.actions.sign.up'), new_user_registration_path %></p>
+
+  <% end %>
 </div>
 
 <div class="row buffer-bottom">
-  <%= render partial: 'events/event', collection: @events %>
+  <% if @events.empty? %>
+    <p><%= "Пока тут нет ни одного события. Будьте первопроходцем!" %></p>
+  <% else %>
+    <%= render partial: 'events/event', collection: @events %>
+  <% end %>
 </div>

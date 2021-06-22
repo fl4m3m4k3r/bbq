@@ -13,14 +13,14 @@
 
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 buffer-bottom">
       <% if @user.events.any? %>
         <h3>Организовал:</h3>
         <div class="row">
           <%= render partial: 'events/event', collection: @user.events %>
         </div>
       <% else %>
-        <p class="buffer-top">Пользователь не организовал ни одного события</p>
+        <p>Пользователь не организовал ни одного события</p>
       <% end %>
     </div>
   </div>

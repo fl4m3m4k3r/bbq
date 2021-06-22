@@ -1,3 +1,7 @@
+body {
+  min-height: 100vh;
+}
+
 /* Buffers */
 .buffer-top {
   margin-top: 20px;
