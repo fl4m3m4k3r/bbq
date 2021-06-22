@@ -5,7 +5,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="form-group">
+  <div class="form-group buffer-bottom">
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: t('activerecord.attributes.user.email'), class: 'form-control' %>
   </div>
@@ -14,7 +14,7 @@
     <div><%= "#{t('form.devise.currently_waiting_confirmation_for')} #{resource.unconfirmed_email}" %></div>
   <% end %>
 
-  <div class="form-group">
+  <div class="form-group buffer-bottom">
     <%= f.label :password %> <i>(<%= t('form.devise.leave_blank_if_you_dont_want_change_password') %>)</i>
     <%= f.password_field :password, autocomplete: t('form.devise.new_password'), class: 'form-control' %>
     <% if @minimum_password_length %>
@@ -22,12 +22,12 @@
     <% end %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group buffer-bottom">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: t('activerecord.attributes.user.password'), class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group buffer-bottom">
     <%= f.label :current_password %>
     <%= f.password_field :current_password, autocomplete: t('activerecord.attributes.user.password_confirmtaion'), class: 'form-control' %>
   </div>

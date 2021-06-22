@@ -7,7 +7,7 @@
 
   <% if @user == current_user %>
     <p>
-      <%= link_to "#{t('global.actions.verb.edit')} #{t('global.profile.one')}".downcase.capitalize, edit_user_path(@user), class: 'btn btn-default' %>
+      <%= link_to "#{t('global.actions.verb.edit')} #{t('global.profile.one')}".downcase.capitalize, edit_user_path(@user), class: 'btn btn-success' %>
     </p>
   <% end %>
 

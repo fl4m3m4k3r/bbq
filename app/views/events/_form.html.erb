@@ -1,7 +1,7 @@
 <%= form_for(@event) do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
-  <div class="form_group">
+  <div class="form_group buffer-bottom">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
