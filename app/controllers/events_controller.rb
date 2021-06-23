@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :create]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :current_user_is_owner?, only: [:edit, :update, :destroy]
+  before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
   def index
     @events = Event.all
@@ -18,8 +18,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
-    @event.user = current_user
+    @event = current_user.events.build(event_params)
 
     if @event.save
       redirect_to @event, notice: I18n.t('controllers.events.created')
@@ -41,19 +40,13 @@ class EventsController < ApplicationController
       user = @event.user
       @event.destroy
       redirect_to user_path(user), notice: I18n.t('controllers.events.destroyed')
-    else
-      redirect_to root_path, alert: 'Это нельзя'
     end
   end
 
   private
 
-  def current_user_is_owner?
-    if
-      @event.user == current_user
-    else
-      redirect_to root_path, alert: 'Не пытайтесь, мы всё предусмотрели.'
-    end
+  def set_current_user_event
+    @event = current_user.events.find(params[:id])
   end
 
   def set_event
