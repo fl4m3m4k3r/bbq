@@ -4,14 +4,14 @@
   <% if user_signed_in? %>
     <%= link_to "#{t('global.actions.verb.create')} #{t('activerecord.models.event.one')}".downcase.capitalize, new_event_path, class: 'btn btn-success' %>
   <% else %>
-    <p><%= "Что бы тоже мочь создавать события необходимо зарегистрироваться, дерзайте!" %> <%= link_to t('global.actions.sign.up'), new_user_registration_path %></p>
+    <p><%= t('global.first_time.you_have_to_registrate_to_create_events') %> <%= link_to t('global.actions.sign.up'), new_user_registration_path %></p>
 
   <% end %>
 </div>
 
 <div class="row buffer-bottom">
   <% if @events.empty? %>
-    <p><%= "Пока тут нет ни одного события. Будьте первопроходцем!" %></p>
+    <p><%= t('global.first_time.there_is_no_events_yet') %></p>
   <% else %>
     <%= render partial: 'events/event', collection: @events %>
   <% end %>

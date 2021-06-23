@@ -3,7 +3,7 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead">
-      В вашей форме <%= "#{errors.count} #{t('global.errors', count: errors.count)}" %>
+      <p><%= "#{t('form.devise.in_your_form')} #{errors.count} #{t('global.errors', count: errors.count)}" %></p>
     </div>
     <ul>
       <% errors.full_messages.each do |message| %>

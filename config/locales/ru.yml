@@ -32,9 +32,14 @@ ru:
       updated: 'Профиль был обновлен'
 
   global:
+    first_time:
+      you_have_to_registrate_to_create_events: 'Что бы тоже мочь создавать события необходимо зарегистрироваться, дерзайте!'
+      there_is_no_events_yet: 'Пока тут нет ни одного события. Будьте первопроходцем!'
+      user_did_not_organizated_any_event: 'Пользователь не организовал ни одного события'
     word:
       account: 'Аккаунт'
       my: 'Мой'
+      or: 'или'
     app:
       name: 'Шашлыки!'
       company: 'Хороший программист'
@@ -52,6 +57,7 @@ ru:
         show: 'Показать'
         edit: 'Редактировать'
         forgot: 'Забыли'
+        organizated: 'Организовал'
       noun:
         delete: 'Удаление'
         change: 'Изменение'
@@ -84,3 +90,4 @@ ru:
       characters_minimum: 'Символов требуется'
       unpleasured_of_servise?: 'Недовольны сервисом?'
       user_data: 'Данные пользователя'
+      in_your_form: 'В вашей форме'

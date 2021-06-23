@@ -21,7 +21,7 @@
           <div>
             <%= link_to t('global.actions.verb.change'), edit_event_path(@event), class: 'btn btn-primary buffer-bottom' %>
             <%= button_to t('global.actions.verb.delete'), @event, method: :delete,
-                  data: { confirm: 'Вы точно хотите удалить событие?' }, class: 'btn btn-danger buffer-bottom' %>
+                  data: { confirm: "#{t('form.confirmation.are_you_sure_that_you_want')} #{t('global.actions.noun.delete')} #{t('activerecord.models.event.one')}" }, class: 'btn btn-danger buffer-bottom' %>
           </div>
           <% end %>
         </div>

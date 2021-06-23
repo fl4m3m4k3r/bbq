@@ -4,6 +4,7 @@
 <!--  Реализовать хелпер и использовать его вместо image_pack_tag-->
   <%#= image_tag user_avatar(@user) %>
   <%= image_pack_tag('user.png') %>
+<!-- ### -->
 
   <% if @user == current_user %>
     <p>
@@ -15,12 +16,12 @@
   <div class="row">
     <div class="col-md-12 buffer-bottom">
       <% if @user.events.any? %>
-        <h3>Организовал:</h3>
+        <h3><%= "#{t('global.actions.verb.organizated')}:"%></h3>
         <div class="row">
           <%= render partial: 'events/event', collection: @user.events %>
         </div>
       <% else %>
-        <p>Пользователь не организовал ни одного события</p>
+        <p><%= "#{t('global.first_time.user_did_not_organizated_any_event')}" %></p>
       <% end %>
     </div>
   </div>
