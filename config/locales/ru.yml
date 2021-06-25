@@ -11,6 +11,11 @@ ru:
         few: 'События'
         many: 'Событий'
         of: 'События'
+      comments:
+        one: 'Комментарий'
+        few: 'Комментария'
+        many: 'Комментариев'
+        of: 'Комментария'
     attributes:
       user:
         email: 'Email'
@@ -30,6 +35,14 @@ ru:
       destroyed: 'Событие удалено :('
     users:
       updated: 'Профиль был обновлен'
+    comments:
+      destroyed: 'Комментарий удален'
+      creared: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscription:
+      destroyed: 'Вы были отписаны от события'
+      creared: 'Вы подписались на это событие'
+      error: 'Подписка/отписка не сработала'
 
   global:
     first_time:
@@ -80,7 +93,9 @@ ru:
 
   form:
     confirmation:
-      are_you_sure_that_you_want: "Вы уверены что хотите удалить аккаунт?"
+      are_you_sure_that_you_want_delete_account: "Вы уверены что хотите удалить аккаунт?"
+      are_you_sure_that_you_want_delete_comment: "Вы уверены что хотите удалить комментарий?"
+      are_you_sure_that_you_want_delete_subscription: "Вы уверены что хотите отписаться?"
     devise:
       new_password: 'Новый пароль'
       current_password: 'Текущий пароль'

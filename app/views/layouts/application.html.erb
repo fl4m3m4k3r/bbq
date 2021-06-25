@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
-    <link rel="stylesheet" href="stic">
     <%= csrf_meta_tags %>
 
     <%= javascript_pack_tag "application" %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/d0932a5015.js" crossorigin="anonymous"></script>
   </head>
 <body>
 
@@ -33,19 +33,19 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container buffer-bottom">
   <div class="row">
     <div class="col-lg-9">
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
   </div>
-
-  <footer class="bg-dark fixed-bottom">
-    <div class="container text-white text-center">
-      <p class="">&copy; <%= I18n.t('global.app.company') %> 2021</p>
-    </div>
-  </footer>
 </div>
+
+<footer class="bg-dark fixed-bottom">
+  <div class="container text-white text-center">
+    <p class="">&copy; <%= I18n.t('global.app.company') %> 2021</p>
+  </div>
+</footer>
 </body>
 </html>

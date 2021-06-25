@@ -44,6 +44,6 @@
 <p> <%= t('form.devise.unpleasured_of_servise?') %> \
   <%= button_to "#{t('global.actions.verb.delete')} #{t('global.word.account')}".downcase.capitalize,
     registration_path(resource_name),
-    data: { confirm: "#{t('form.confirmation.are_you_sure_that_you_want')} #{t('global.actions.verb.delete')} #{t('global.word.account')}".downcase.capitalize },
+    data: { confirm: "#{t('form.confirmation.are_you_sure_that_you_want_delete_account')} #{t('global.actions.verb.delete')} #{t('global.word.account')}".downcase.capitalize },
     method: :delete %>
 </p>
