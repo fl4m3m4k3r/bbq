@@ -13,7 +13,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require('jquery')
-window.jQuery = $; window.$ = $
+window.jQuery = $;
+window.$ = $
 
 import 'bootstrap'
 import '../stylesheets/application.scss'
+import '../images/event.jpg'
+import '../images/user.png'
+import '../images/event_thumb.jpg'

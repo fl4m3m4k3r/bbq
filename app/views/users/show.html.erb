@@ -1,7 +1,9 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
 
-  <%= image_tag user_avatar(@user) %>
+<!--  Реализовать хелпер и использовать его вместо image_pack_tag-->
+  <%#= image_tag user_avatar(@user) %>
+  <%= image_pack_tag('user.png') %>
 
   <% if @user == current_user %>
     <p>
