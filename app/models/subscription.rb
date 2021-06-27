@@ -8,6 +8,7 @@ class Subscription < ApplicationRecord
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
 
   validate :subscriber_cannot_be_event_owner
+  validate :email_is_already_taken_by_registrated_user
 
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
@@ -30,5 +31,9 @@ class Subscription < ApplicationRecord
 
   def subscriber_cannot_be_event_owner
     errors.add(:owner, "can't subscribe on own event") if event.user == user
+  end
+
+  def email_is_already_taken_by_registrated_user
+    errors.add(:email, "already taken by some registrated user") if User.exists?(email: user_email)
   end
 end
