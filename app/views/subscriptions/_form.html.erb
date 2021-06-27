@@ -2,18 +2,18 @@
   <% render partial: 'partials/form_errors' , locals: {model: subscription} %>
 
   <% unless user_signed_in? %>
-    <div class="form-group">
+    <div class="form-group buffer-bottom">
       <%= f.label :user_name %>
       <%= f.text_field :user_name, class: 'form-control' %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group buffer-bottom">
       <%= f.label :user_email %>
       <%= f.text_field :user_email, class: 'form-control' %>
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="actions buffer-bottom">
     <%= f.submit 'Подписаться', class: 'btn btn-primary' %>
   </div>
 <% end %>
