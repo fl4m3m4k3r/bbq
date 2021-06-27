@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @new_comment.save
       redirect_to @event, notice: I18n.t('controllers.comments.created')
     else
-      render 'events/show', alert: I18n.t('controllers.comments.error')
+      redirect_to @event, alert: I18n.t('controllers.comments.error')
     end
   end
 
