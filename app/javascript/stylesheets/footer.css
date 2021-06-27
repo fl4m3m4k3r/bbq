@@ -1,0 +1,13 @@
+body {
+  position: relative;
+
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}
