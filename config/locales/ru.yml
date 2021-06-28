@@ -27,6 +27,14 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+    errors:
+      models:
+        subscription:
+          attributes:
+            event:
+              email_was_already_taken_by_some_registrated_user: 'Email уже взят зарегистрированным пользователем'
+            user:
+              subscriber_cannot_be_event_owner: 'Владелец события не может подписаться на собственное событие'
 
   controllers:
     events:
