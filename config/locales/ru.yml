@@ -77,6 +77,8 @@ ru:
         back: 'Вернуться'
         show: 'Показать'
         edit: 'Редактировать'
+        subscribe: 'Подписаться'
+        send: 'Отправить'
         forgot: 'Забыли'
         organizated: 'Организовал'
       noun:
