@@ -1,7 +1,9 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
 
-  <%= user_avatar(@user) %>
+  <div class="user-avatar buffer-bottom">
+    <%= user_avatar(@user) %>
+  </div>
 
   <% if @user == current_user %>
     <p>

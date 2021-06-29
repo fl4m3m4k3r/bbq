@@ -1,8 +1,14 @@
 .user-avatar .img-icon {
   margin-top: -2px;
-  height: 30px;
+  height: 40px;
 }
 
 .img-icon img {
-  height: 30px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px #CCCCCC solid;
+}
+
+.event-form-subscribers-avatars {
+ display: flex;
 }

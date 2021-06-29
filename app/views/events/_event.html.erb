@@ -15,6 +15,13 @@
           </h3>
           <div class="buffer-both"><%= event.address %> </div>
         </div>
+        <div class="event-form-subscribers-avatars">
+          <% event.subscribers.each do |user| %>
+            <div class="img-icon">
+              <%= user_avatar_thumb(user) %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
