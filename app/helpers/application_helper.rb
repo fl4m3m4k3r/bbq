@@ -1,6 +1,10 @@
 module ApplicationHelper
   def user_avatar(user)
-    #TODO: user real avatars
+    if user.avatar?
+      image_tag(user.avatar.url)
+    else
+      image_pack_tag('media/images/user.png')
+    end
   end
 
   def bootstrap_class_for(flash_type)

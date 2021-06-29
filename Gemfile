@@ -11,6 +11,9 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+gem 'carrierwave'
+gem 'rmagick'
+
 group :development do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
